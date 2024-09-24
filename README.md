@@ -39,5 +39,44 @@ Antes de começar, verifique se você tem os seguintes itens instalados:
 Clone este repositório em sua máquina local:
 
 ```bash
-git clone https://seu-repositorio-url/carrinho_teste.git
+git clone [https://seu-repositorio-url/carrinho_teste.git](https://github.com/luisfvalentim/carrinho_blutooth)
 cd carrinho_teste
+```
+
+## Configurando o projeto
+
+### 1. Instalar as dependências
+
+Execute o seguinte comando para instalar as dependências do projeto:
+
+```bash
+flutter pub get
+```
+
+### 2. Configurar o Android
+
+1. Abra o arquivo `android/app/build.gradle` e certifique-se de que as versões do `compileSdkVersion`, `targetSdkVersion` e `minSdkVersion` estão definidas conforme o seguinte:
+
+   ```gradle
+   compileSdkVersion 33
+   minSdkVersion 21
+   targetSdkVersion 33
+   ```
+
+2. Em seguida, no arquivo `android/build.gradle`, verifique se a versão do `kotlin_version` está correta:
+
+   ```gradle
+   ext.kotlin_version = '1.6.10'
+   ```
+
+## Executando o aplicativo
+
+1. Conecte um dispositivo Android ou inicie um emulador.
+2. Execute o seguinte comando no terminal para iniciar o aplicativo:
+
+   ```bash
+   flutter run
+   ```
+
+
+
