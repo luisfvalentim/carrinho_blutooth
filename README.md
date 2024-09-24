@@ -39,7 +39,7 @@ Antes de começar, verifique se você tem os seguintes itens instalados:
 Clone este repositório em sua máquina local:
 
 ```bash
-git clone [https://seu-repositorio-url/carrinho_teste.git](https://github.com/luisfvalentim/carrinho_blutooth)
+git clone https://seu-repositorio-url/carrinho_teste.git
 cd carrinho_teste
 ```
 
