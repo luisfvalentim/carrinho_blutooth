@@ -1,0 +1,46 @@
+// Arquivo: android/app/build.gradle
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 33  // Defina a versão mais recente do SDK
+
+    defaultConfig {
+        applicationId "com.example.app" // Substitua pelo seu ID de aplicativo
+        minSdkVersion 21  // Versão mínima do SDK suportada
+        targetSdkVersion 33  // Versão alvo do SDK
+        versionCode 1
+        versionName "1.0"
+
+        // Ative o suporte a multiDex se necessário
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Se precisar de suporte a multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+}
